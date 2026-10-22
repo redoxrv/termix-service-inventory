@@ -1,0 +1,48 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Termix-SSH/Termix-Registry/main/registry-index-schema.json",
+  "registry": "service-inventory",
+  "name": "Service Inventory",
+  "apiVersion": 1,
+  "publicKey": "zZFemt0hwuX9oXcKrchftT9Si1EsBkqltUxouH9IuxY=",
+  "updatedAt": "2026-10-22T16:53:53.453Z",
+  "plugins": [
+    {
+      "id": "service-inventory",
+      "name": "Service Inventory",
+      "description": "Discover Dokploy services and containers, inspect exposure and prepare access changes.",
+      "author": "Service Inventory contributors",
+      "category": "Infrastructure",
+      "repository": "https://github.com/redoxrv/termix-service-inventory",
+      "icon": "Layers",
+      "features": [
+        "Automatically discover Dokploy apps and running or stopped containers",
+        "Distinguish public routes, private endpoints, internal components and unknown access",
+        "Prepare explicit public or private profiles without changing exposure on discovery",
+        "Use the central controller from the web and linked desktop apps"
+      ],
+      "versions": [
+        {
+          "version": "0.2.0",
+          "api": "1",
+          "engine": {
+            "termix": ">=26.10.4",
+            "api": "^1.11"
+          },
+          "url": "https://raw.githubusercontent.com/redoxrv/termix-service-inventory/main/packages/service-inventory-0.2.0.tmxplug",
+          "sha256": "65eedff098932f5ef63e5d8422b03719c4cd0a839e142e42ee47a27fe6ea55ea",
+          "signature": "OPfo0M70SkmMzHgqOniNv623MFzdt7t087P3xZuHiOHSiS/ANOLj1Q46fu1e8plGWILHkU+yk1yCV+C+1XD5BQ==",
+          "size": 175583,
+          "capabilities": [
+            "network:serve",
+            "network:outbound",
+            "ui:surface",
+            "kv:own"
+          ],
+          "notes": "Generic Dokploy inventory and non-executing access plans. No deployment-specific data.",
+          "publishedAt": "2026-10-22T16:53:53.453Z",
+          "releaseNotesUrl": "https://github.com/redoxrv/termix-service-inventory/blob/main/CHANGELOG.md"
+        }
+      ]
+    }
+  ]
+}
