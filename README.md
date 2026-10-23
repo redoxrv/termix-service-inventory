@@ -1,36 +1,30 @@
 # Service Inventory for Termix
 
-Signed generic distribution for Dokploy, Docker and Proxmox inventory, with
-registered HTTP service access through a separate controller. Credentials,
-deployment configuration, inventory and backups are not included.
+Signed generic Dokploy, Docker and Proxmox inventory with a compact machine and
+service view. Current configured access is separate from requested changes.
+Administrative endpoints can be declared through sanitized backend metadata;
+protected administration may be public or private. No deployment data is shipped.
 
-## Version 0.4.0
+## Registry
 
-Add this separate registry and compare its signing fingerprint:
+`https://raw.githubusercontent.com/redoxrv/termix-service-inventory/main/index-v3.json`
 
-`https://raw.githubusercontent.com/redoxrv/termix-service-inventory/main/index-v2.json`
+Signing fingerprint: **`b9479b0c9d7d55d4`**. Public key: `IbfaK9qPsrVvKjY1Z5biFV+v0d8x0+xGA8zATnAB6vY=`.
+Keep signature verification enabled. The index lists versions 0.5.0 and 0.4.0;
+each artifact URL is pinned to an immutable commit. Installed versions should
+remain explicitly pinned with automatic updates disabled.
 
-**`b9479b0c9d7d55d4`**
+Termix 26.10.4 cannot change the source of an installed plugin through its API.
+Moving from an older registry requires a qualified full data backup, an exact
+review of plugin-owned data, and preservation of settings before reinstalling.
+Uninstall always removes owned data. Do not blindly reinstall a populated plugin.
+Once installed from this registry, the normal update API can switch between its
+signed versions without uninstalling. Review state and any migrations first.
 
-Public key: `IbfaK9qPsrVvKjY1Z5biFV+v0d8x0+xGA8zATnAB6vY=`
+HTTP access controls apply only to services registered with an independent
+controller. Port/domain onboarding and an unpublished target are not implemented
+by this UI update. Inventory never changes exposure. Configuration and backend
+checks do not prove independent WAN or Tailscale reachability.
 
-Configure inventory sources and the access controller on the central server.
-Linked desktop apps use the same controller. Registered service changes require
-a fresh plan, administrative permission and revision checks. Configuration and
-backend checks do not claim independent Internet or Tailscale reachability.
-
-## Earlier installations and rollback
-
-The original registry remains unchanged at:
-
-`https://raw.githubusercontent.com/redoxrv/termix-service-inventory/main/index.json`
-
-Original signing fingerprint: **`6ed423a160951f7c`**. Its 0.2.0 package and signature
-are preserved. On Termix26.10.4 a registry cannot change its pinned signing key
-in place. Migrating an installed plugin to the separate registry requires a
-qualified current data backup and preservation of its settings before reinstall.
-Uninstall removes plugin-owned data; review any stored data before proceeding.
-
-Packages contain readable program code and source maps. Signatures establish
-origin and integrity, rather than sandbox isolation. Keep signature verification
-enabled. License: Apache-2.0; bundled third-party attribution is in NOTICE.
+The original registries, keys and signed 0.2.0/0.4.0 artifacts remain unchanged.
+License: Apache-2.0; third-party attribution is included in NOTICE.

@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.5.0
+
+### Changed
+
+- Group services by machine and keep current access separate from requested changes.
+- Display protected infrastructure endpoints using explicit sanitized metadata.
+- Keep source freshness and reachability evidence independent.
+
+### Added
+
+- Restore filtered Proxmox cache during a reviewed upgrade without changing its original timestamp.
+
 ## 0.4.0
 
 ### Added
