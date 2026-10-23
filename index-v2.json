@@ -1,0 +1,49 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Termix-SSH/Termix-Registry/main/registry-index-schema.json",
+  "registry": "service-inventory-v2",
+  "name": "Service Inventory v2",
+  "apiVersion": 1,
+  "publicKey": "IbfaK9qPsrVvKjY1Z5biFV+v0d8x0+xGA8zATnAB6vY=",
+  "updatedAt": "2026-10-23T12:39:02.660Z",
+  "plugins": [
+    {
+      "id": "service-inventory",
+      "name": "Service Inventory",
+      "description": "Discover infrastructure resources and control registered service access through a separate controller.",
+      "author": "Service Inventory contributors",
+      "category": "Infrastructure",
+      "repository": "https://github.com/redoxrv/termix-service-inventory",
+      "icon": "Layers",
+      "features": [
+        "Discover Dokploy apps, Docker containers and Proxmox VM/LXC resources",
+        "Keep source availability separate when a platform is unavailable",
+        "Control registered HTTP services through a dedicated access controller",
+        "Prepare fresh access plans, apply changes and restore previous routing",
+        "Keep credentials in central backend settings and record administrative operations"
+      ],
+      "versions": [
+        {
+          "version": "0.4.0",
+          "api": "1",
+          "engine": {
+            "termix": ">=26.10.4",
+            "api": "^1.11"
+          },
+          "url": "https://raw.githubusercontent.com/redoxrv/termix-service-inventory/main/packages/service-inventory-0.4.0.tmxplug",
+          "sha256": "39172f195366e2dba187494ee86e055d83d05fa9babc403a6da7a5490945539b",
+          "signature": "E+p1hI1cVpsuP5YkotmSoDFFw6VBcUbLxM2BvAuXBjBzy7CInvNBlUbTlqZmekaZW7VQfLukQeFUwFWNWrdUBw==",
+          "size": 196792,
+          "capabilities": [
+            "network:serve",
+            "network:outbound",
+            "ui:surface",
+            "kv:own"
+          ],
+          "notes": "Independent inventory sources and registered HTTP service access. No deployment-specific data.",
+          "publishedAt": "2026-10-23T12:39:02.660Z",
+          "releaseNotesUrl": "https://github.com/redoxrv/termix-service-inventory/blob/main/CHANGELOG.md"
+        }
+      ]
+    }
+  ]
+}

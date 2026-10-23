@@ -1,5 +1,30 @@
 # Changelog
 
+## 0.4.0
+
+### Added
+
+- Read VM/LXC metadata directly through a dedicated read-only Proxmox API token.
+- Show independent source availability and keep unrelated inventory usable during outages.
+- Control pre-registered HTTP services through a separate HTTPS access controller.
+- Prepare revision-bound plans, apply access and restore previous routing with backend permissions and audit.
+
+### Security
+
+- Verify the token has only Sys.Audit and VM.Audit throughout its effective permissions.
+- Allow private HTTPS only for the exact configured Tailscale hostname, with verified TLS and no redirects.
+- Bind executable plans and operations to the acting user and configured controller; preserve idempotent retries.
+- Keep configuration/backend checks separate from unverified external network reachability.
+
+## 0.3.0
+
+### Added
+
+- Include filtered VM/LXC snapshots from explicit native Proxmox discovery.
+- Distinguish machines from Docker containers and show snapshot freshness.
+- Save requested access profiles for guest services without exposing a whole guest.
+- Require a separate backend permission to refresh metadata; reject secrets, stale imports and unsafe identities.
+
 ## 0.2.0
 
 ### Changed
