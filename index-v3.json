@@ -4,7 +4,7 @@
   "name": "Service Inventory",
   "apiVersion": 1,
   "publicKey": "IbfaK9qPsrVvKjY1Z5biFV+v0d8x0+xGA8zATnAB6vY=",
-  "updatedAt": "2026-10-24T12:57:32.446Z",
+  "updatedAt": "2026-10-24T13:57:40.848Z",
   "plugins": [
     {
       "id": "service-inventory",
@@ -23,6 +23,27 @@
         "Change Dokploy panel Internet or Tailscale access through its existing private API"
       ],
       "versions": [
+        {
+          "version": "0.6.3",
+          "api": "1",
+          "engine": {
+            "termix": ">=26.10.4",
+            "api": "^1.11"
+          },
+          "url": "https://raw.githubusercontent.com/redoxrv/termix-service-inventory/810b2530cb5163c334ea0ca6aaf3666de96f05c4/packages/service-inventory-0.6.3.tmxplug",
+          "sha256": "6463588ca3e81b67feb4f7b22db760967003fe9fa65a8c8c3318ed000b38e3e1",
+          "signature": "ztReuGv0TTVhxhImuaNEmBVJchzmoqU2JHajA1Rwnhb88NHuzlinFUEdIhsIyVJtMxJHfCAOAjgR2D/ohjryCg==",
+          "size": 259156,
+          "capabilities": [
+            "network:serve",
+            "network:outbound",
+            "ui:surface",
+            "kv:own"
+          ],
+          "notes": "Add a machine navigator, clickable service cards, one inspector, coherent toggles and keyboard controls.",
+          "publishedAt": "2026-10-24T13:57:40.848Z",
+          "releaseNotesUrl": "https://github.com/redoxrv/termix-service-inventory/blob/main/CHANGELOG.md"
+        },
         {
           "version": "0.6.2",
           "api": "1",

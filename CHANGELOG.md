@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.6.3
+
+### Changed
+
+- Navigate machines, service cards and one inspector without nested detail panels.
+- Open and close a service by clicking its card or its disclosure button.
+- Keep links and action buttons independent of card selection, with keyboard support.
+- Show current access beside selectable mode rows; keep review and confirmation explicit.
+- Refine service identity, access badges and endpoint links using the host theme.
+- Restore keyboard focus on close and support horizontal machine navigation on small screens.
+- Keep backend operations, permissions and exposure configuration unchanged.
+
 ## 0.6.2
 
 ### Changed
