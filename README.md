@@ -1,30 +1,29 @@
 # Service Inventory for Termix
 
-Signed generic Dokploy, Docker and Proxmox inventory with a compact machine and
-service view. Current configured access is separate from requested changes.
-Administrative endpoints can be declared through sanitized backend metadata;
-protected administration may be public or private. No deployment data is shipped.
+Signed generic Dokploy, Docker and Proxmox inventory grouped by machine.
+Current configured access is separate from requested changes. No deployment
+inventory, credentials or private configuration is shipped.
 
-## Registry
-
-`https://raw.githubusercontent.com/redoxrv/termix-service-inventory/main/index-v3.json`
-
+Registry: `https://raw.githubusercontent.com/redoxrv/termix-service-inventory/main/index-v3.json`
 Signing fingerprint: **`b9479b0c9d7d55d4`**. Public key: `IbfaK9qPsrVvKjY1Z5biFV+v0d8x0+xGA8zATnAB6vY=`.
-Keep signature verification enabled. The index lists versions 0.5.0 and 0.4.0;
-each artifact URL is pinned to an immutable commit. Installed versions should
-remain explicitly pinned with automatic updates disabled.
 
-Termix 26.10.4 cannot change the source of an installed plugin through its API.
-Moving from an older registry requires a qualified full data backup, an exact
-review of plugin-owned data, and preservation of settings before reinstalling.
-Uninstall always removes owned data. Do not blindly reinstall a populated plugin.
-Once installed from this registry, the normal update API can switch between its
-signed versions without uninstalling. Review state and any migrations first.
+Keep signature verification and exact version pins enabled, with automatic
+updates disabled. Versions 0.6.0, 0.5.0 and 0.4.0 remain available from immutable
+artifact commits. Use the supported update API to preserve plugin-owned data;
+uninstall removes that data and is not an upgrade procedure.
 
-HTTP access controls apply only to services registered with an independent
-controller. Port/domain onboarding and an unpublished target are not implemented
-by this UI update. Inventory never changes exposure. Configuration and backend
-checks do not prove independent WAN or Tailscale reachability.
+HTTP registration, Internet/Tailscale/unpublished routing and rollback require
+an authenticated independent access controller with an approved guest catalog.
+Disabled routes have no application upstream; a provisioned private listener may
+remain as an inert 404. Existing listeners, DNS, host firewall and public ingress
+must be provisioned and independently qualified by the administrator.
 
-The original registries, keys and signed 0.2.0/0.4.0 artifacts remain unchanged.
+Native Dokploy administration controls are an explicit backend opt-in. They
+change only the validated Dokploy public routers while preserving the private
+management API. This provider supports public and Tailscale modes. Its upstream
+API has no atomic compare-and-swap; the plugin serializes its own requests,
+checks hashes and preserves recovery data, but cannot lock external editors.
+
+Configuration/backend checks do not prove external Internet or tailnet access.
+The original registries, public keys and signed artifacts remain unchanged.
 License: Apache-2.0; third-party attribution is included in NOTICE.

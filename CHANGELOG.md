@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.6.0
+
+### Added
+
+- Register HTTP services on approved guests without publishing them.
+- Opt in to Internet/Tailscale access for the Dokploy administration panel using its private API.
+- Preserve exact routing snapshots and recover uncertain writes after a process restart.
+- Choose Internet, Tailscale only or unpublished access with a reviewed plan.
+- Require an explicit public hostname only when enabling Internet access.
+
 ## 0.5.0
 
 ### Changed

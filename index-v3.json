@@ -4,12 +4,12 @@
   "name": "Service Inventory",
   "apiVersion": 1,
   "publicKey": "IbfaK9qPsrVvKjY1Z5biFV+v0d8x0+xGA8zATnAB6vY=",
-  "updatedAt": "2026-10-23T19:47:37.403Z",
+  "updatedAt": "2026-10-24T08:33:53.250Z",
   "plugins": [
     {
       "id": "service-inventory",
       "name": "Service Inventory",
-      "description": "Discover infrastructure resources and control registered service access through a separate controller.",
+      "description": "Discover infrastructure resources and manage service access with private platform adapters and an optional controller.",
       "author": "Service Inventory contributors",
       "category": "Infrastructure",
       "repository": "https://github.com/redoxrv/termix-service-inventory",
@@ -19,9 +19,31 @@
         "Keep source availability separate when a platform is unavailable",
         "Control registered HTTP services through a dedicated access controller",
         "Prepare fresh access plans, apply changes and restore previous routing",
-        "Keep credentials in central backend settings and record administrative operations"
+        "Keep credentials in central backend settings and record administrative operations",
+        "Change Dokploy panel Internet or Tailscale access through its existing private API"
       ],
       "versions": [
+        {
+          "version": "0.6.0",
+          "api": "1",
+          "engine": {
+            "termix": ">=26.10.4",
+            "api": "^1.11"
+          },
+          "url": "https://raw.githubusercontent.com/redoxrv/termix-service-inventory/297c9933e75161068b4fe1ba51fe4ed611f7e46a/packages/service-inventory-0.6.0.tmxplug",
+          "sha256": "09f27d7929d8aeb691dbeee3a125e30fe15ebac6529fffbd54f75614585f24ba",
+          "signature": "CSmUSxBf/FhS+gHriwqrk0Mu3iUqDw/l+GAWBQ7xyii2WxRqGrcUhPkNK3rjgTTzYF0nLKAS81+meRNy2ttaCQ==",
+          "size": 244910,
+          "capabilities": [
+            "network:serve",
+            "network:outbound",
+            "ui:surface",
+            "kv:own"
+          ],
+          "notes": "HTTP service registration and unpublished routes for an independent controller; explicit opt-in native Dokploy routing controls.",
+          "publishedAt": "2026-10-24T08:33:53.250Z",
+          "releaseNotesUrl": "https://github.com/redoxrv/termix-service-inventory/blob/main/CHANGELOG.md"
+        },
         {
           "version": "0.5.0",
           "api": "1",
