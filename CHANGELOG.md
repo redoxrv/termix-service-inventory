@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.6.2
+
+### Changed
+
+- Separate current access, pending confirmation and completed changes.
+- Hide the prepared plan after an operation completes, with a clear action to change access again.
+- Add labelled Internet/Tailscale links, clearer machine summaries and a compact themed layout.
+- Keep configuration and network verification in expandable details.
+- Complete missing empty-machine translations.
+- Preserve all backend operations, permissions and existing exposure choices.
+
 ## 0.6.1
 
 ### Fixed

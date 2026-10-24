@@ -4,7 +4,7 @@
   "name": "Service Inventory",
   "apiVersion": 1,
   "publicKey": "IbfaK9qPsrVvKjY1Z5biFV+v0d8x0+xGA8zATnAB6vY=",
-  "updatedAt": "2026-10-24T10:19:02.537Z",
+  "updatedAt": "2026-10-24T12:57:32.446Z",
   "plugins": [
     {
       "id": "service-inventory",
@@ -23,6 +23,27 @@
         "Change Dokploy panel Internet or Tailscale access through its existing private API"
       ],
       "versions": [
+        {
+          "version": "0.6.2",
+          "api": "1",
+          "engine": {
+            "termix": ">=26.10.4",
+            "api": "^1.11"
+          },
+          "url": "https://raw.githubusercontent.com/redoxrv/termix-service-inventory/08eb8cb0d9174e2cba172ba92e8ee083daf6083a/packages/service-inventory-0.6.2.tmxplug",
+          "sha256": "2ec7c197df5976f0690716cecd5c99133a552b118e6a09be021665e37a380996",
+          "signature": "9XLscEA6IFyHVXoB1vXyqLrXQg7oGmfFrylkPP+LNVi5qFaYMe7crxvLF8p+018QLlqdHy9gg5+NQSEoj45UCg==",
+          "size": 249093,
+          "capabilities": [
+            "network:serve",
+            "network:outbound",
+            "ui:surface",
+            "kv:own"
+          ],
+          "notes": "Clarify access states, label public and private links, and separate completed changes from pending confirmation.",
+          "publishedAt": "2026-10-24T12:57:32.446Z",
+          "releaseNotesUrl": "https://github.com/redoxrv/termix-service-inventory/blob/main/CHANGELOG.md"
+        },
         {
           "version": "0.6.1",
           "api": "1",

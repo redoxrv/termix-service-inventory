@@ -8,7 +8,7 @@ Registry: `https://raw.githubusercontent.com/redoxrv/termix-service-inventory/ma
 Signing fingerprint: **`b9479b0c9d7d55d4`**. Public key: `IbfaK9qPsrVvKjY1Z5biFV+v0d8x0+xGA8zATnAB6vY=`.
 
 Keep signature verification and exact version pins enabled, with automatic
-updates disabled. Versions 0.6.1, 0.6.0, 0.5.0 and 0.4.0 remain available from immutable
+updates disabled. Versions 0.6.2, 0.6.1, 0.6.0, 0.5.0 and 0.4.0 remain available from immutable
 artifact commits. Use the supported update API to preserve plugin-owned data;
 uninstall removes that data and is not an upgrade procedure.
 
