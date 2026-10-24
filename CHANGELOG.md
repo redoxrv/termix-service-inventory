@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.6.1
+
+### Fixed
+
+- Omit an empty Dokploy routers section so Traefik accepts private access configuration.
+- Preserve existing access history while upgrading the previous public-state baseline.
+
 ## 0.6.0
 
 ### Added
